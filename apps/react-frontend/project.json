@@ -14,5 +14,11 @@
       },
       "configurations": {}
     }
+  },
+  "lint": {
+    "executor": "@nx/eslint:lint",
+    "options": {
+      "lintFilePatterns": ["apps/react-frontend/**/*.ts"]
+    }
   }
 }
