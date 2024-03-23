@@ -1,4 +1,5 @@
 import { Todo } from '@task-manager-monorepo/data';
+import { Todos } from '@task-manager-monorepo/ui';
 import { useEffect, useState } from 'react';
 
 export function App() {
@@ -29,13 +30,7 @@ export function App() {
   return (
     <>
       <h1>Todos</h1>
-      <ul>
-        {todos.map((t) => (
-          <li className="todo" key={t.title}>
-            {t.title}
-          </li>
-        ))}
-      </ul>
+      <Todos todos={todos} />
       <button id="add-todo" onClick={addTodo}>
         Add Todo
       </button>
