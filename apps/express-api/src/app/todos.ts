@@ -1,8 +1,5 @@
+import { Todo } from '@task-manager-monorepo/data';
 import { Express } from 'express';
-
-interface Todo {
-  title: string;
-}
 
 const todos: Todo[] = [{ title: 'Todo 1' }, { title: 'Todo 2' }];
 

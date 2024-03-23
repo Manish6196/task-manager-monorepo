@@ -1,8 +1,5 @@
+import { Todo } from '@task-manager-monorepo/data';
 import { useEffect, useState } from 'react';
-
-interface Todo {
-  title: string;
-}
 
 export function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
