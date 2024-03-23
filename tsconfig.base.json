@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@task-manager-monorepo/data": ["libs/data/src/index.ts"]
+      "@task-manager-monorepo/data": ["libs/data/src/index.ts"],
+      "@task-manager-monorepo/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
