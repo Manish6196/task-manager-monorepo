@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://jsonplaceholder.typicode.com",
-    "secure": true
+    "target": "http://localhost:3333",
+    "secure": false
   }
 }
