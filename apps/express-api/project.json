@@ -1,0 +1,24 @@
+{
+  "name": "express-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/express-api/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "express-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "express-api:build:development"
+        },
+        "production": {
+          "buildTarget": "express-api:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
