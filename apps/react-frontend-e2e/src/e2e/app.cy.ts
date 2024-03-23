@@ -1,13 +1,14 @@
-import { getGreeting } from '../support/app.po';
+import { getAddTodoButton, getTodos } from '../support/app.po';
 
 describe('react-frontend-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
+  it('should display todos', () => {
     // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+    // cy.login('my-email@something.com', 'myPassword');
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+    getTodos().should((todos) => expect(todos.length).equal(2));
+    getAddTodoButton().click();
+    getTodos().should((todos) => expect(todos.length).equal(3));
   });
 });
