@@ -5,7 +5,7 @@ export function App() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch('/api');
+        const res = await fetch('/api/todos');
         const data = await res.json();
         console.log(data);
       } catch (e: any) {

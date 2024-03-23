@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://jsonplaceholder.typicode.com",
+    "secure": true
+  }
+}
