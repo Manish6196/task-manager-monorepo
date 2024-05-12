@@ -9,6 +9,7 @@ import { addTodoRoutes } from './app/todos';
 
 const app = express();
 
+app.use(express.json());
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 app.get('/api', (req, res) => {
@@ -16,6 +17,10 @@ app.get('/api', (req, res) => {
 });
 
 addTodoRoutes(app);
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'assets', 'index.html'));
+});
 
 const port = process.env.PORT || 3333;
 const server = app.listen(port, () => {

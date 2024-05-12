@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "serve": "nx run-many --target=serve",
-    "test-e2e-react-frontent": "nx e2e react-frontend-e2e --headed --no-exit",
-    "lint": "nx lint react-frontend --fix"
+    "serve": "nx run-many -t serve --exclude=express-api-e2e,react-frontend-e2e",
+    "build": "nx run-many -t build --skip-nx-cache --exclude=express-api-e2e,react-frontend-e2e",
+    "test": "nx run-many -t test --exclude=express-api-e2e,react-frontend-e2e",
+    "lint": "nx run-many -t lint --exclude=express-api-e2e,react-frontend-e2e",
+    "e2e-frontent": "nx e2e react-frontend-e2e --headed --no-exit"
   },
   "private": true,
   "dependencies": {
